@@ -1,0 +1,359 @@
+/*================================================terminal-like type======================================================*/
+.inline-block{
+    display: inline-block;
+}
+.relative{
+    position: relative;
+}
+.farToUnseen{
+    position: absolute;
+    left:-9999px;
+}
+.gar-terminal-like input:focus+span>b{
+    position: absolute;
+    top:6px;
+    right:-12px;
+    width: 8px;
+    height: 20px;
+    color: hsla(0, 0%, 0%, 0);
+    background: #2c8229;
+}
+
+/*================================================modal======================================================*/
+.modal{
+    min-width:500px;
+    min-height: 200px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    font:500 24px/1 courier,courier_ser;
+    color: #2c8229;
+    border:2px solid #2C8229;
+    padding:2px;
+    background: rgba(0,0,0,.6);
+}
+.modal_hand{
+    width:calc(100%-2px);
+    height:100%;
+    text-align: center;
+    border:2px solid #2c8229;
+    background: #004100;
+}
+.modal_hand span:last-child{
+    float: right;
+    padding:0 5px;
+    border-left:2px solid #2c8229;
+}
+
+/*================================================paint triangle by pure css ======================================================*/
+.triangle{
+    position: absolute;
+    top:-2px;/* .modal's border-top-width */
+    left:-2px;/* .modal/s border-left-width */
+    width:0;
+    height:0;
+    border-style:solid ;
+    border-width:0 0 14px 14px ;/* half of 14px:7px in fact ; >.innerTriangle's border-width for show its border-color */
+    border-color: transparent transparent transparent #2c8229; /* border-left-color must be equal to .modal's border-color */
+}
+.innerTriangle{
+    position: absolute;
+    top: -1px;
+    left:-15px;
+    width:0;
+    height:0;
+    border-style:solid;
+    border-width:0 0 13px 13px;
+    border-color: transparent transparent transparent black;/* border-left-color must be equal to .modal's father element's bgColor so that .modal's border-color can be clouded */
+}
+/*================================================gar-canvasModal======================================================*/
+.gar-canvasModal{
+    width:500px;
+    height:200px;
+    background: #000;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-250px, -100px);
+    -moz-transform: translate(-250px, -100px);
+    -ms-transform: translate(-250px, -100px);
+    -o-transform: translate(-250px, -100px);
+    transform: translate(-250px, -100px);
+    z-index:9000;
+}
+.gar-modalBg{
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+.gar-dragArea{
+    position: absolute;
+    top:7px;
+    left:11px;
+    width:454px;
+    height:22px;
+    background: transparent;
+}
+.gar-modalBg>a{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    font:20px/1 courier,courier_ser;
+    color: transparent;
+    background: transparent;
+    position: absolute;
+    top:8px;
+    right:6px;
+}
+.gar-modalBg>a:active{
+    color: #000;
+    text-shadow: 1px 1px 2px ;
+}
+.gar-modalBody{
+    position: absolute;
+    top:45px;
+    left:18px;
+    width:460px;
+    font:20px/1 courier,courier_ser;
+    color: rgb(44,170,42);
+    z-index:9001;
+}
+.gar-modalBody>p,.gar-modalBody>small{
+    margin-bottom:15px;
+}
+.gar-modalBody .tips{
+    display: inline-block;
+    font-size: 12px;/* content must <=55 words */
+    border-bottom: solid 1px rgb(44,190,42);
+}
+.gar-modalBody button{
+    border:none;
+    margin-left:50%;
+    transform: translateX(-50px);
+}
+.unseen{
+    visibility: hidden;
+}
+.modalDefault{
+    transform: scale(.01);
+}
+.modalOpen,.modalClose{
+    -webkit-transition: transform .2s ease-in 0s;
+    -moz-transition: transform .2s ease-in 0s;
+    -ms-transition: transform .2s ease-in 0s;
+    -o-transition: transform .2s ease-in 0s;
+    transition: transform .2s ease-in 0s;
+}
+.modalOpen{
+    transform: scale(1);
+}
+.modalClose{
+    transform: scale(.01);
+}
+
+/*================================================ progress bar ======================================================*/
+.gar-progressBar{
+    width:500px;
+    height:200px;
+    color: #2c8229;
+    text-align: center;
+    padding:30px 20px 10px;
+    border:3px solid #2c8229;
+    border-top-width:20px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-250px,-100px);
+}
+.gar-progressBar>p{
+    font-size:40px;
+    margin-bottom:70px;
+}
+.gar-progressBar>small{
+    font-size: 14px;
+}
+.gar-progressBar>div{
+    width:500px;
+    height:53px;
+    margin-top:10px;
+    background: transparent;
+}
+.gar-progressBar i{
+    display: inline-block;
+    width:20px;
+    height:35px;
+    margin:0 2px;
+    background: transparent;
+}
+.progressBar_show{
+    background: #2c8229!important;
+}
+.closeProgressBar{
+    transform: skew(89deg,0deg);
+}
+.noscroll{
+    overflow: hidden;
+}
+
+/*================================================ gallery ======================================================*/
+.gargallery>li{
+    margin-bottom:40px;
+}
+.gargallery>li:last-child{
+    margin-bottom:0;
+}
+.gargallery>li img{
+    width:100%;
+    height:350px;
+    border-radius:5px ;
+}
+.gargallery>li>div{
+    height:350px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.gargallery>li p{
+    width:100%;
+    font:bold 1.666666667rem/1 '';
+    position: absolute;
+    bottom:0;
+}
+.gargallery>li>div:hover p{
+    text-align: center;
+    transform: translateX(0);
+    background: #ffffff;
+}
+@media screen and (min-width: 1000px){
+    .gargallery>li p{
+        text-align: left;
+        transform: translateX(-150px);
+        transition:transform .5s ease-in 0s;
+    }
+    .gargallery>li>div:hover p{
+        text-align: center;
+        transform: translateX(0);
+        background: #ffffff;
+    }
+}
+
+@media screen  and(max-device-width:800px){
+    .gargallery>li>div{
+        text-align: center;
+    }
+    .gargallery>li>div>p{
+        background: #ffffff;
+    }
+}
+.gargallery>li:nth-child(8n-7)>div,.gargallery>li:nth-child(8n-3)>div,.gargallery>li:nth-child(8n)>div{
+    width:30%;
+}
+.gargallery>li:nth-child(8n-7)>div:nth-child(1),.gargallery>li:nth-child(8n-3)>div:nth-child(1),.gargallery>li:nth-child(8n)>div:nth-child(1),
+.gargallery>li:nth-child(8n-7)>div:nth-child(2),.gargallery>li:nth-child(8n-3)>div:nth-child(2),.gargallery>li:nth-child(8n)>div:nth-child(2){
+    margin-right:5%;  /* 1-1-1 300 */
+}
+
+.gargallery>li:nth-child(8n-6)>div,.gargallery>li:nth-child(8n-4)>div{
+    width:48%;
+}
+.gargallery>li:nth-child(8n-6)>div:nth-child(1),.gargallery>li:nth-child(8n-4)>div:nth-child(1){    /* 2-2 480 */
+    margin-right:4%;
+}
+
+.gargallery>li:nth-child(8n-5)>div,.gargallery>li:nth-child(8n-2)>div{
+    width:24%;
+}
+.gargallery>li:nth-child(8n-5)>div:nth-child(2),.gargallery>li:nth-child(8n-2)>div:nth-child(2){
+    width:48%;
+}
+.gargallery>li:nth-child(8n-5)>div:nth-child(2),.gargallery>li:nth-child(8n-2)>div:nth-child(2){    /* 1-2-1 240-480 */
+    margin:0 2%;
+}
+
+.gargallery>li:nth-child(8n-1)>div{
+    width:23.5%;
+}
+.gargallery>li:nth-child(8n-1)>div:nth-child(1),.gargallery>li:nth-child(8n-1)>div:nth-child(2),
+.gargallery>li:nth-child(8n-1)>div:nth-child(3){    /* 1-1-1-1 230 */
+    margin-right:2%;
+}
+
+.slowDisappear{
+    transition: opacity .3s ease-out 0s;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.initAppear{
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+/*================================================ garsinglePro ======================================================*/
+#garsinglePro{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:9999;
+    background: rgba(0,0,0,.5);
+    overflow: hidden;
+}
+#garsinglePro>img{
+    position: absolute;
+    top:50%;
+    left:50%;
+}
+
+/*================================================ gartreeMenu ======================================================*/
+.gartreeMenu{
+    background: rgba(125, 125, 125, 0.6);
+    position: fixed;
+    left:-79px;
+    top:200px;
+    transition:left .5s ease-in-out 0s;
+}
+.gartreeMenu:hover{
+    transition:left .5s ease-in-out 0s;
+    left:0;
+}
+.gartreeMenu:after{
+    content: '产品分类菜单';
+    font:20px/1 '';
+    display: inline-block;
+    width:20px;
+    color: #fff;
+    position: absolute;
+    right:-21px;
+    top:20px;
+}
+.gartreeMenu li{
+    font:400 20px '';
+    color: #ffffff;
+    margin:10px;
+    cursor: pointer;
+}
+.gartreeMenu li:hover{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

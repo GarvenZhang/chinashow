@@ -1,0 +1,173 @@
+/* public */
+img[alt='mainbackground']{
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:-1;
+}
+
+/* main */
+.main-wrap{
+    width:1000px;
+    margin:0 auto ;
+}
+
+
+.nav{
+    width:100%;
+    text-align: center;
+    margin-top:100px;
+    background: rgba(125, 125, 125, 0.6);
+    position: relative;
+}
+.nav>a{
+    display: inline-block;
+    font:20px/60px '';
+    color: white;
+    margin:0 40px ;
+}
+.nav>a:last-child{
+    position: absolute;
+    right: 0;
+}
+.nav>a:hover{
+    color: red;
+}
+/* ctx */
+.ctx-show-wrap{
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.ctx{
+    position: absolute;
+    top:0;
+    width:3100px;  /* 1000px + 50px +1000px +50px +1000px */
+}
+/* homepage */
+.homepage{
+    width:1000px;
+    margin-top:20px;
+    margin-right:50px;
+}
+.homepage>img{
+    border:20px solid #fff;
+}
+
+/* product */
+.product{
+    width:1000px;
+    margin-top:50px;
+}
+.catalogue>div:first-child{
+    width:490px;
+    margin-right:20px;
+}
+.catalogue>div:first-child>h2{
+    font:bold 40px/1 '';
+    color: #ffffff;
+    margin-bottom:30px;
+}
+.catalogue>div:last-child{
+    width:490px;
+}
+.catalogue li{
+    margin-bottom:20px;
+    position: relative;
+    cursor: pointer;
+}
+.catalogue li>img{
+    opacity:0.5;
+    filter:alpha(opacity=50);
+}
+.catalogue li:hover>img{
+    transition: opacity .5s ease-out 0s;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.catalogue li>h3{
+    font:800 40px/1 '';
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-61px,-20px);   /* h3's width&height: 122px,40px */
+    cursor: pointer;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+.catalogue li:hover>h3{
+    transition: opacity .5s ease-out 0s;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.prod-detail>ul{
+    margin-bottom:40px; /* single li's margin-bottom:40px */
+}
+
+/* contact */
+.contact{
+    width:1000px;
+    margin-top:150px;
+    margin-left:50px;
+}
+.contact li,.contact h2{
+    font:20px/2 '';
+    color: #ffffff;
+}
+.contact li{
+    margin-left:280px;
+}
+
+.contact li>span{
+    margin-left:50px;
+}
+.contact h2{
+    font: bold 30px/1 '';
+    text-align: center;
+    margin-bottom:20px;
+}
+.contact>img{
+    margin:0 157px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

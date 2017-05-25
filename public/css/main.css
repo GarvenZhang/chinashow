@@ -1,0 +1,439 @@
+body{
+    background: #000;
+    color: #ffffff;
+}
+/* header */
+.header{
+    width:100%;
+    font:22px/50px '';
+    text-align: left;
+    text-indent:10px;
+    color: #ffffff;
+    background: #333399;
+    cursor: default;
+}
+/* main */
+.main{
+    width:100%;
+}
+.main>div:first-child{
+    width:10%;
+}
+.main>div:first-child>ul{
+    margin-top:5%;
+    margin-left:5%;
+
+}
+.main>div:first-child li:not(.prodPageL),.prodPageL>a{
+    font:100 1.5em/1.5 '';
+    color: #ffffff;
+    margin-bottom:5%;
+    cursor: pointer;
+}
+
+.main>div:first-child li:hover,.prodPageL>a:hover{
+    color: blue;
+}
+.main>div:last-child{
+    width:88%;
+    padding:1% 1% 0;
+    background: rgba(211,211,211,.7);
+}
+@media screen and (min-width: 960px){
+    .main>div:last-child{
+        min-height:500px;
+    }
+}
+@media screen and (min-width: 1280px){
+    .main>div:last-child{
+        min-height:700px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .main>div:last-child{
+        min-height:800px;
+    }
+}
+@media screen and (min-width: 1920px){
+    .main>div:last-child{
+        min-height:900px;
+    }
+}
+.path{
+    font:800 2em/1 '';
+    margin-bottom:1%;
+}
+.path a{
+    color: rgba(211, 211, 211, .7);
+    margin-right:5px;
+}
+.path a:hover{
+    color:blue;
+    
+}
+.path a:not(.root){
+    margin-left:5px;
+}
+.operation{
+    margin-bottom:2%;
+}
+.operation>input{
+    font:1.5em/2 '';
+    padding:0 5px;
+    margin-right:15px;
+    float: left;
+}
+.operation>input:nth-child(2){
+    display: none;
+}
+.tips{
+    width: 60%;
+    height: 40px;
+}
+.tips>p{
+    width: 100%;
+    height: 40px;
+    font:20px/40px '';
+    color: white;
+    text-indent: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: none;
+    background: #337ab7;
+    z-index: 40;
+}
+
+/** 文件处理 **/
+.doc_area{
+    width: 100%;
+    background: lightgray;
+}
+.doc_area >div{
+    width: calc(100% - 25px*2);
+    padding: 25px;
+}
+
+.doc_item{
+    width: 23%;
+    margin: 10px 8px 10px 0;
+    float: left;
+    border: 1px solid transparent;
+    position: relative;
+}
+.doc_item:hover{
+    border: 1px solid black;
+}
+.doc_pic{
+    width:100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.doc_pic>a,.doc_pic img{
+    width: 195px;
+    height: 160px;
+    display: inline-block;
+    cursor: pointer;
+}
+.doc_ti{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    text-align: center;
+}
+.doc_ti>:nth-child(1){
+    width: calc(92% - 4px*2);
+    height: 46px;
+    line-height: 46px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 4px;
+    color: white;
+    border: none;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    outline: none;
+    cursor: pointer;
+}
+.doc_ti>:nth-child(1):hover{
+    background: rgba(0,0,0,0.5);
+}
+.doc_del{
+    position: absolute;
+    top:-4px;
+    left:193px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: url("../images/delete.png") center center no-repeat;
+    z-index: 10;
+    cursor: pointer;
+    visibility: hidden;
+}
+.doc_del:hover{
+    background: url("../images/delete_red.png") center center no-repeat;
+}
+
+
+.doc_ti .doc_modify{
+    position: absolute;
+    top:2px;
+    left: 183px;
+    width: 40px;
+    height: 40px;
+    background: url("../images/modify.png") center center no-repeat;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/*modal*/
+.modal{
+    position: absolute;
+    top:3em;
+    left: 11em;
+    width: auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid black;
+    display: none;
+}
+.modal>:nth-child(1){
+    margin-bottom: 10px;
+}
+.modal>:nth-child(2){
+    width:80px;
+    height: 35px;
+    text-align: center;
+    font: 20px/35px '';
+    color: white;
+    margin-left: 89%;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: deepskyblue;
+    cursor: pointer;
+}
+.m_show{
+    display: block;
+}
+/*uploads imgs*/
+#uploadPics{
+    width: 684px;
+    background: white;
+}
+/*uploads area*/
+#uploadPics .upload_area{
+    width: 100%;
+    border: 2px solid #E6E6E6;
+    background: #E6E6E6;
+}
+#uploadPics .upload_area>div{
+    width: calc(100% - 2*10px);
+    height: 130px;
+    padding: 10px;
+    position: relative;
+
+}
+#uploadPics .upload_area>div>div{
+    width: 99%;
+    float: left;
+    padding-top:77px ;
+    border: 1px dotted #E6E6E6;
+    background: url("/images/add_img.png") top center no-repeat rgba(0,0,0,0.3);
+}
+#uploadPics .chooseFile{
+    width: 85%;
+    height: 44px;
+    font:18px/44px 'Microsoft Himalaya';
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: dodgerblue !important ;
+    cursor: pointer;
+}
+
+#uploadPics #upload_pic_files{
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: 561px;
+    height: 46px;
+    opacity: 0;
+    filter:alpha(opacity:0);
+    z-index: 2;
+    cursor: pointer;
+}
+#uploadPics #picDragArea{
+    width: 60%;
+    height:124px ;
+    font: 20px/124px '';
+    float: right;
+    text-align: center;
+    color: gray;
+    border: 1px dotted #E6E6E6;
+    background: white;
+    cursor: pointer;
+}
+/*infos area*/
+#uploadPics .infos_area{
+    width: 100%;
+    height:60px;
+    border:2px solid #E6E6E6;
+    border-top: none;
+    background: white;
+}
+#uploadPics .infos_area>:nth-child(1){
+    width: 70%;
+    height: 60px;
+    font:16px/60px '';
+    text-indent: 10px;
+    float: left;
+    color: red;
+}
+#uploadPics .infos_area>:nth-child(2){
+    width:20%;
+    float: right;
+    margin-top:10px;
+    /*margin-left: 353px;*/
+}
+#uploadPics .infos_area>:nth-child(2) button{
+    width:100%;
+    height: 40px;
+    font: 16px/40px '';
+    color: white;
+    text-align: center;
+    margin-right: 12px;
+    /*margin-left: 10px;*/
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: deepskyblue;
+    cursor: pointer;
+}
+/*show pics area*/
+#uploadPics .showPic_area{
+    width: 100%;
+    border: 2px solid #E6E6E6;
+    border-top: none;
+    background: white;
+}
+#uploadPics .showPic_area>div{
+    width: calc(100% - 2*10px);
+    padding: 20px 15px 0 20px;
+}
+#uploadPics .pic_item{
+    width: 22%;
+    height: 104px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #E6E6E6;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+#uploadPics .showPic_area>div:nth-child(4n){
+    margin-right: 0;
+}
+#uploadPics .pic_item>div:first-child{
+    text-align: center;
+    padding: 10px 0;
+    background: url("/images/bg.png") left center no-repeat;
+}
+#uploadPics .pic_item>div:first-child img{
+    width: 100px;
+    height: 80px;
+    display: inline-block;
+}
+#uploadPics .pic_info{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 28px;
+    font: 15px/28px '';
+    text-indent: 3px;
+    color: white;
+    visibility: hidden;
+    border: 1px solid transparent;
+    background: rgba(0,0,0,0.7);
+}
+#uploadPics .pic_name{
+    width: 80%;
+    height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+#uploadPics .pic_delete{
+    width: 13px;
+    height:28px;
+    float: right;
+    margin-right: 8px;
+    background: url("/images/delete_white.png")left center no-repeat;
+}
+#uploadPics .pic_delete:hover{
+    background: url("/images/delete_blue.png")left center no-repeat;
+}
+#uploadPics .upload_success{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url("/images/success.png") left center no-repeat;
+}
+
+
+#uploadPics .upload_false{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url("/images/false.png") left center no-repeat;
+}
+
+.tip{
+    width: 100%;  }
+.tip p{
+    width: 40%;
+    height: 40px;
+    font: 25px/40px '';
+    text-indent: 15px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: none;
+    background: red;
+}
+.d_show{
+    display: block !important;
+}
+.v_show{
+    visibility: visible !important;
+}
+
+
+/* correct pwd */
+
+.pwdCorr{
+    font:20px/1.5 '';
+    text-align: center;
+}
+.pwdCorr input{
+    font:20px/1.5 '';
+    background: rgba(255,255,255,.6);
+}
+.pwdCorr p{
+    margin-bottom:20px;
+}
+.btn>input{
+    border:2px solid white;
+}
+.btn>input:focus{
+    color: white;
+}

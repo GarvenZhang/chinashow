@@ -1,0 +1,35 @@
+body{
+    background: lightblue;
+}
+.loginForm{
+    width:300px;
+    height:150px;
+    border:1px solid #000000;
+    padding:20px 10px ;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-170px,-85px);
+}
+.loginForm label,.loginForm input{
+    font:16px/1.5 '';
+}
+.loginForm input:not(.btn){
+    background: rgba(125,125,125,.5);
+}
+.loginForm [name='user']:focus,.loginForm [name='pwd']:focus{
+    color: white;
+    background: blue;
+}
+.loginForm>p{
+    text-align: center;
+    margin:20px 0;
+}
+.btn>input{
+    border:2px solid #000000;
+}
+.btn>input:focus{
+    color: white;
+    border-style:dotted;
+    background: blue;
+}

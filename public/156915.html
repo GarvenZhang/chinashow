@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上意陶瓷管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script>window.onerror=function(){return true;};</script>
+</head>
+<body>
+    <div class="header">上意陶瓷管理系统</div>
+    <div class="main clearfix">
+        <div class="fl">
+            <ul id="tabWrap">
+                <li>图片处理</li>
+                <li>修改密码</li>
+                <li class="prodPageL"><a href="/" target="_blank">进入展示页</a></li>
+            </ul>
+        </div>
+        <div class="fl">
+            <div class="picHandle " id="picHandle">
+                <div class="tips clearfix">
+                    <p>文件夹名不能为空！</p>
+                    <p>文件夹名已存在,请重命名文件夹！</p>
+                    <p>请填写需要修改的文件夹名</p>
+                    <p>图片名已存在！</p>
+                    <p>文件夹名不能存在~!@#$%^&*()这些符号</p>
+                </div>
+                <div class="path" id="path">
+                    <a href="" class="root">全部相册</a>/<i href="#"></i>
+                </div>
+                <div class="operation clearfix" id="operation">
+                    <input type="button" id="createDocs" value="创建文件夹"><input type="button" id="uploads" value="上传图片">
+                </div>
+                <div class="doc_area" id="doc_area">
+                    <div class="clearfix">
+
+                    </div>
+                </div>
+                <div class="modal" id="modal">
+                    <div></div>
+                    <button id="exit">退出</button>
+                </div>
+            </div>
+            <div class="pwdCorr hide" id="pwdCorr">
+                <form id="corPwdForm">
+                    <p>
+                        <label for="nowPwd">旧密码:</label><input type="text" name="nowPwd" id="nowPwd"><br>
+                    </p>
+                    <p>
+                        <label for="newPwd">新密码:</label><input type="text" name="newPwd" id="newPwd"><br>
+                    </p>
+                    <p>
+                        <label for="confirmPwd">确认密码:</label><input type="text" name="confirmPwd" id="confirmPwd">
+                    </p>
+                    <p class="btn">
+                        <input name="confirmBtn" type="button" value="确认修改">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/md5.js"></script>
+    <script src="/lib/garlibrary.js"></script>
+    <script type="text/javascript" src="/js/ownJs/j_ownlibrary.js"></script>
+    <script src="/lib/garModule/garJs.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+</html>

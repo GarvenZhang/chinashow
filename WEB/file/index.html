@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>佛山市景逸建材有限公司</title>
+    <script  src="/lib/garlibrary.min.js"></script>
+</head>
+<body>
+    <script>
+        var client=gar.browserDetect(),sys=client.system;
+
+        if(client.engine.x5)location.assign(location.href+'/pc');
+        else if(sys.iphone||sys.android||sys.winMobile||sys.ipad||sys.ipod||sys.nokiaN){
+            //phone browser
+            document.body.innerHTML='<div id="errorEnvir" style="text-align: center;"> <img style="display: inline-block" src="data:image/png;base64,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" alt="提醒logo" > <h4 style="font-size: 20px;font-weight: 400;line-height: 30px;color: #2B333F;">请在微信客户端打开链接</h4> </div>'
+            document.getElementById('errorEnvir').style.marginTop=pageHeight/20+'px';
+            document.getElementsByTagName('title')[0].innerHTML='抱歉,出错了!';
+        }
+        else location.assign(location.href+'/pc');
+    </script>
+</body>
+</html>
